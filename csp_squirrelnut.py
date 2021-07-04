@@ -254,6 +254,12 @@ def setup_squirrel_nut_constraints():
     return constraints
 
 def squirrel_nut_search_brute_force(): 
+    """executes a full brute force search of the entire search space of possible 
+    combinations
+
+    Returns:
+        dict: the assignments of values to the variables reprsenting the solution
+    """
     variables = BEFORE_ROBBERY_VARIABLES + AFTER_ROBBERY_VARIABLES
     domain = setup_squirrel_nut_domain()
     constraints = setup_squirrel_nut_constraints()
@@ -267,7 +273,20 @@ def merge_list_of_maps(list_of_maps):
         combined.update(amap)
     return combined
 
-def squirrel_nut_search(): 
+def squirrel_nut_optimized_search(): 
+    """is an optimized search that considers how certain constraints only have an impact on a subset of
+    the variables.   We define the set of constraint groups, where each constraint group contains those 
+    constraints that are connected by virtue of them each impacting the same variable.
+    So, for example, constraint 6 is in the same group as constraint 3, because they each constrain the 
+    common variables WEBSTER_WALNUT_BEFORE and WAYNE_WALNUT_BEFORE.  
+    Similarly, constraint 16 is also in the same group because it too also constrains the varaible WAYNE_WALNUT_BEFORE.
+
+    constraint #18 is in a group by itself, because it contrains the variables WILSON_WALNUT_AFTER and 
+    WILSON_WALNUT_BEFORE, and there are no other constraints that also constrain those two variables.
+
+    Returns:
+        dict: the assignments of values to the variables reprsenting the solution
+    """
     variables = BEFORE_ROBBERY_VARIABLES + AFTER_ROBBERY_VARIABLES
     domain = setup_squirrel_nut_domain()
     constraints = setup_squirrel_nut_constraints()
@@ -296,6 +315,6 @@ def squirrel_nut_search():
     return "no solution"
 
 if __name__ == '__main__':
-    solution = squirrel_nut_search()
+    solution = squirrel_nut_optimized_search()
     pprint.pprint(solution)
 

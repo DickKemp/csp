@@ -45,3 +45,35 @@ With that you can search for a solution as follows:
 
 the return value will be the assignment, which is a dictionary that assigns a value to each of the variables.
 
+below is the solution for Squirrels & Nuts:
+
+    {'Wayne_Acorn_After': 350, 
+    'Wayne_Acorn_Before': 400,
+    'Wayne_Pecan_After': 200, 
+    'Wayne_Pecan_Before': 350,
+    'Wayne_Walnut_After': 198,
+    'Wayne_Walnut_Before': 200,
+    'Webster_Acorn_After': 375,
+    'Webster_Acorn_Before': 425,
+    'Webster_Pecan_After': 270,
+    'Webster_Pecan_Before': 300,
+    'Webster_Walnut_After': 180,
+    'Webster_Walnut_Before': 235,
+    'Weezie_Acorn_After': 380,
+    'Weezie_Acorn_Before': 490,
+    'Weezie_Pecan_After': 180,
+    'Weezie_Pecan_Before': 350,
+    'Weezie_Walnut_After': 120,
+    'Weezie_Walnut_Before': 190,
+    'Wilma_Acorn_After': 430,
+    'Wilma_Acorn_Before': 450,
+    'Wilma_Pecan_After': 270,
+    'Wilma_Pecan_Before': 225,
+    'Wilma_Walnut_After': 198,
+    'Wilma_Walnut_Before': 235,
+    'Wilson_Acorn_After': 390,
+    'Wilson_Acorn_Before': 500,
+    'Wilson_Pecan_After': 160,
+    'Wilson_Pecan_Before': 250,
+    'Wilson_Walnut_After': 180,
+    'Wilson_Walnut_Before': 200}

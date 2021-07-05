@@ -33,7 +33,15 @@ we should have an object called CSP that holds the information about this proble
 an assignment is a dict from variable to value
 e.g. assignment[WILSON_WALNUT_AFTER] will have value 300
 
-To search for solution call the search_for_solution() function:
+To use the framework to search for a solution, you need to specify 
+1. varialbles:  a list of the variables
+2. domain: a disctionary that maps each variable to its list of domain values
+3. constraints: a list of the constraints
 
-    def search_for_solution(csp, assignment)
+With that you can search for a solution as follows:
+
+    csp = CSP(variables, domain, constraints)
+    solution = csp.search_for_solution()
+
+the return value will be the assignment, which is a dictionary that assigns a value to each of the variables.
 
